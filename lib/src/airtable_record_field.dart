@@ -7,7 +7,7 @@ class AirtableRecordField<T> {
   AirtableRecordField({
     @required this.fieldName,
     @required this.value,
-  }) : assert(value.runtimeType != T);
+  }) : assert(value.runtimeType == T);
 
   Map<String, String> toJSON() => {fieldName: _valueToJSON};
 
